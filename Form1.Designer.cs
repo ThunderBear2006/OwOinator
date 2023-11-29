@@ -61,11 +61,11 @@ partial class Form1
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(135, 72);
+            this.label1.Location = new System.Drawing.Point(10, 286);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(287, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Cut off one head, two more will take its place.";
+            this.label1.Text = "Hckd by Ethrody and ThunderBear";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
@@ -96,7 +96,9 @@ partial class Form1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(466, 200);
+            //setup for auto size based on picture ?? if so, set this.AutoSize = false
+            this.ClientSize = new System.Drawing.Size(800, 200);
+
             this.StartPosition = FormStartPosition.Manual;
             this.Controls.Add(this.Help);
             this.Controls.Add(this.label1);

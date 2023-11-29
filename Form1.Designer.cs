@@ -65,7 +65,7 @@ partial class Form1
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(287, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Hckd by Ethrody and ThunderBear";
+            this.label1.Text = "Hckd by Ethrody and MischievousMason";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
@@ -110,7 +110,7 @@ partial class Form1
             this.MinimizeBox = false;
             this.ControlBox = false;
             this.Name = "Hydra";
-            this.ShowInTaskbar = false;
+            this.ShowInTaskbar = Program.Safety;
             this.Text = "Hydra";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);

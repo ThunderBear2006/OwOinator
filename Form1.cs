@@ -10,18 +10,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
-using Timer = System.Windows.Forms.Timer;
 
 namespace FiksHomeWork
 {
    public partial class Form1 : Form
     {
-			private System.Windows.Forms.Timer moveTimer;
-        private int moveSpeedX = 5; // Initial X-axis movement speed
-        private int moveSpeedY = 5; // Initial Y-axis movement speed
-				private PictureBox pictureBox1;
+        private string fileUrl;
+        private int moveSpeedX = 1; // Initial X-axis movement speed
+        private int moveSpeedY = 1; // Initial Y-axis movement speed
+		private PictureBox pictureBox1;
+        private List<Keys> keySequence = new List<Keys> { Keys.U, Keys.W, Keys.U };
 
-				private List<Keys> keySequence = new List<Keys> { Keys.U, Keys.W, Keys.U };
+        private readonly string[] names = new string[] {
+            "Why don't you join them~", "Penis enlargement pills! Only $6.99!", "Fnaf at freddyyyyy's!", "You have been trolled",
+            "This seems like something you'd like", "Do NOT use hand sanitizer as lube...", "Yep. You're a furry", "Enjoy :3",
+            "My gift to you <3", "MICHAEL DON't LEAVE ME HERE!!", "UwU", "x3", "OwO", "*nuzzles you", "Gimme headpats!"
+        };
 
         private int currentKeyIndex = 0;
 
@@ -53,24 +57,31 @@ namespace FiksHomeWork
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        public Form1()
+        public Form1(string fileUrl)
         {
+            this.fileUrl = fileUrl;
+
+            if (!Program.TickTimer.Enabled)
+                Program.TickTimer.Start();
+
             InitializeComponent();
-            Program.Heads.Append(this);
-						InitializePictureBox();
+            InitializePictureBox();
 
             // Initialize and start the timer for form movement
-            moveTimer = new System.Windows.Forms.Timer();
-            moveTimer.Interval = 1; // Adjust the interval as needed
-            moveTimer.Tick += MoveTimer_Tick;
-            moveTimer.Start();
+            Program.TickTimer.Tick += MoveTimer_Tick;
         }
 
         private void MoveTimer_Tick(object sender, EventArgs e)
         {
+            if (fileUrl == Program.DefaultURL)
+                fileUrl = OwOinator.GetLambSauce();
+
+            if (Program.HeadsCut < 5)
+                return;
+
             // Move the form in random directions
-            this.Left += moveSpeedX;
-            this.Top += moveSpeedY;
+            this.Left += Program.HeadsCut * moveSpeedX;
+            this.Top += Program.HeadsCut * moveSpeedY;
 
             // Check if the form has reached the screen bounds on X-axis
             if (this.Right >= Screen.PrimaryScreen.Bounds.Right || this.Left <= Screen.PrimaryScreen.Bounds.Left)
@@ -91,16 +102,16 @@ namespace FiksHomeWork
         {
             TopMost = true;
             ShowInTaskbar = false;
+            Text = Util.GetRandomString(names);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i <= Program.HeadsCut; i++)
-            {
-                Form newForm = new Form1();
-                Program.Heads.Append(newForm);
-                newForm.Show();
-            }
+            Form newForm1 = new Form1(OwOinator.GetLambSauce());
+            newForm1.Show();
+
+            Form newForm2 = new Form1(OwOinator.GetLambSauce());
+            newForm2.Show();
 
             Program.HeadsCut++;
 
@@ -111,16 +122,16 @@ namespace FiksHomeWork
         {
 
         }
-				public void InitializePictureBox()
+        
+		public void InitializePictureBox()
         {
             // PictureBox
             pictureBox1 = new PictureBox();
-            pictureBox1.Location = new System.Drawing.Point(50, 50);
-            pictureBox1.Size = new System.Drawing.Size(200, 200);
+            pictureBox1.Location = new(50, 50);
+            pictureBox1.Size = new(500, 500);
 
-            // Load the image from file and set it to the PictureBox
-            pictureBox1.Image = System.Drawing.Image.FromFile("drag.jpg");
-						
+            // Load the image from url and set it to the PictureBox
+            pictureBox1.Load(fileUrl);
 
             // Set the PictureBoxSizeMode to adjust how the image is displayed
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -128,9 +139,5 @@ namespace FiksHomeWork
             // Add the PictureBox to the form's controls
             Controls.Add(pictureBox1);
         }
-				
-				
     }
-		
-		
 }

@@ -1,0 +1,15 @@
+C:\Users\Purpl\Desktop\FiksHomeWork\bin\Debug\net7.0-windows\FiksHomeWork.exe
+C:\Users\Purpl\Desktop\FiksHomeWork\bin\Debug\net7.0-windows\FiksHomeWork.deps.json
+C:\Users\Purpl\Desktop\FiksHomeWork\bin\Debug\net7.0-windows\FiksHomeWork.runtimeconfig.json
+C:\Users\Purpl\Desktop\FiksHomeWork\bin\Debug\net7.0-windows\FiksHomeWork.dll
+C:\Users\Purpl\Desktop\FiksHomeWork\bin\Debug\net7.0-windows\FiksHomeWork.pdb
+C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\FiksHomeWork.csproj.AssemblyReference.cache
+C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\FiksHomeWork.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\FiksHomeWork.AssemblyInfoInputs.cache
+C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\FiksHomeWork.AssemblyInfo.cs
+C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\FiksHomeWork.csproj.CoreCompileInputs.cache
+C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\FiksHomeWork.dll
+C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\refint\FiksHomeWork.dll
+C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\FiksHomeWork.pdb
+C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\FiksHomeWork.genruntimeconfig.cache
+C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\ref\FiksHomeWork.dll

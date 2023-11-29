@@ -1,0 +1,2 @@
+Program uses rule34 api to retrieve links to "images" based off of what games the user has installed
+The program then opens a new form window with said "images" displaying on a window that is hard to close

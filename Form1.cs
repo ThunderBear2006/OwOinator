@@ -40,7 +40,7 @@ namespace FiksHomeWork
                 {
                     // Trigger the action when the full sequence is pressed
                     // For example, you can close the application
-                    System.Environment.Exit(1);
+                    System.Environment.Exit(34);
 
                     // Reset the key sequence for the next use
                     currentKeyIndex = 0;

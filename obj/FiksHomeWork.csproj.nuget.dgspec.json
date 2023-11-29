@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Purpl\\Desktop\\FiksHomeWork\\FiksHomeWork.csproj": {}
+    "D:\\vec\\ThunderBear thing\\OwOinator\\FiksHomeWork.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Purpl\\Desktop\\FiksHomeWork\\FiksHomeWork.csproj": {
+    "D:\\vec\\ThunderBear thing\\OwOinator\\FiksHomeWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Purpl\\Desktop\\FiksHomeWork\\FiksHomeWork.csproj",
+        "projectUniqueName": "D:\\vec\\ThunderBear thing\\OwOinator\\FiksHomeWork.csproj",
         "projectName": "FiksHomeWork",
-        "projectPath": "C:\\Users\\Purpl\\Desktop\\FiksHomeWork\\FiksHomeWork.csproj",
-        "packagesPath": "C:\\Users\\Purpl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Purpl\\Desktop\\FiksHomeWork\\obj\\",
+        "projectPath": "D:\\vec\\ThunderBear thing\\OwOinator\\FiksHomeWork.csproj",
+        "packagesPath": "C:\\Users\\fikfr\\.nuget\\packages\\",
+        "outputPath": "D:\\vec\\ThunderBear thing\\OwOinator\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Users\\Purpl\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Purpl\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Users\\Purpl\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
+          "C:\\Users\\fikfr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

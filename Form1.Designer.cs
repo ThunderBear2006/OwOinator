@@ -73,7 +73,7 @@ partial class Form1
 
             // 
             // Help
-            // 
+            /*
             this.Help.Location = new System.Drawing.Point(14, 141);
             this.Help.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Help.Name = "Help";
@@ -82,7 +82,7 @@ partial class Form1
             this.Help.Text = "Help";
             this.Help.UseVisualStyleBackColor = true;
             this.Help.Click += new System.EventHandler(this.button1_Click_1);
-            // 
+            */
             // Hydra
             // 
             Random random = new Random();

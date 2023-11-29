@@ -13,3 +13,17 @@ C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\refint\FiksHomeWork
 C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\FiksHomeWork.pdb
 C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\FiksHomeWork.genruntimeconfig.cache
 C:\Users\Purpl\Desktop\FiksHomeWork\obj\Debug\net7.0-windows\ref\FiksHomeWork.dll
+D:\vec\ThunderBear thing\OwOinator\bin\Debug\net7.0-windows\FiksHomeWork.exe
+D:\vec\ThunderBear thing\OwOinator\bin\Debug\net7.0-windows\FiksHomeWork.deps.json
+D:\vec\ThunderBear thing\OwOinator\bin\Debug\net7.0-windows\FiksHomeWork.runtimeconfig.json
+D:\vec\ThunderBear thing\OwOinator\bin\Debug\net7.0-windows\FiksHomeWork.dll
+D:\vec\ThunderBear thing\OwOinator\bin\Debug\net7.0-windows\FiksHomeWork.pdb
+D:\vec\ThunderBear thing\OwOinator\obj\Debug\net7.0-windows\FiksHomeWork.GeneratedMSBuildEditorConfig.editorconfig
+D:\vec\ThunderBear thing\OwOinator\obj\Debug\net7.0-windows\FiksHomeWork.AssemblyInfoInputs.cache
+D:\vec\ThunderBear thing\OwOinator\obj\Debug\net7.0-windows\FiksHomeWork.AssemblyInfo.cs
+D:\vec\ThunderBear thing\OwOinator\obj\Debug\net7.0-windows\FiksHomeWork.csproj.CoreCompileInputs.cache
+D:\vec\ThunderBear thing\OwOinator\obj\Debug\net7.0-windows\FiksHomeWork.dll
+D:\vec\ThunderBear thing\OwOinator\obj\Debug\net7.0-windows\refint\FiksHomeWork.dll
+D:\vec\ThunderBear thing\OwOinator\obj\Debug\net7.0-windows\FiksHomeWork.pdb
+D:\vec\ThunderBear thing\OwOinator\obj\Debug\net7.0-windows\FiksHomeWork.genruntimeconfig.cache
+D:\vec\ThunderBear thing\OwOinator\obj\Debug\net7.0-windows\ref\FiksHomeWork.dll

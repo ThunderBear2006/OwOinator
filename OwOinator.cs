@@ -202,6 +202,16 @@ public class OwOinator
         catch {}
     }
 
+    public static string GetImage(string url) {
+        try {
+            var name = file_names[Random.Shared.Next(0, file_names.Length)];
+            var filePath = string.Empty;
+
+            using WebClient client = new();
+            var postfix = url.Split(".").Last();
+        }
+    }
+
     private static void OwOifyWallPaper(string url)
     {
         var postfix = string.Empty;
